@@ -760,6 +760,10 @@ namespace SohImGui {
                 Tooltip("Makes every surface in the game climbable");
                 EnhancementCheckbox("Moon Jump on L", "gMoonJumpOnL");
                 Tooltip("Holding L makes you float into the air");
+                EnhancementCheckbox("Turbo on L", "gTurboOnL");
+                Tooltip("Holding L makes you super fast");
+                EnhancementCheckbox("Freeze Enemies", "gFreezeEnemies");
+                Tooltip("Causes enemies to freeze in place. Can't be interacted with while this is on");
                 EnhancementCheckbox("Super Tunic", "gSuperTunic");
                 Tooltip("Makes every tunic have the effects of every other tunic");
                 EnhancementCheckbox("Easy ISG", "gEzISG");
