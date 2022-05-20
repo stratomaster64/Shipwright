@@ -754,6 +754,17 @@ namespace SohImGui {
                     ImGui::EndMenu();
                 }
 
+                if (ImGui::BeginMenu("Items...")) {
+                    EnhancementCheckbox("Unrestricted Items", "gNoRestrictItems");
+                    Tooltip("Allows you to use any item at any location");
+                    EnhancementCheckbox("Underwater Items", "gUnderwaterItems");
+                    Tooltip("Allows you to use any item underwater (as long as you're standing)");
+                    EnhancementCheckbox("No Age Restrictions", "gNoRestrictAge");
+                    Tooltip("Allows you to use any item as either age");
+
+                    ImGui::EndMenu();
+                }
+
                 EnhancementCheckbox("No Clip", "gNoClip");
                 Tooltip("Allows you to walk through walls");
                 EnhancementCheckbox("Climb Everything", "gClimbEverything");
@@ -768,8 +779,6 @@ namespace SohImGui {
                 Tooltip("Makes every tunic have the effects of every other tunic");
                 EnhancementCheckbox("Easy ISG", "gEzISG");
                 Tooltip("Automatically activates the Infinite Sword glitch, making you constantly swing your sword");
-                EnhancementCheckbox("Unrestricted Items", "gNoRestrictItems");
-                Tooltip("Allows you to use any item at any location");
                 EnhancementCheckbox("Freeze Time", "gFreezeTime");
                 Tooltip("Freezes the time of day");
 
