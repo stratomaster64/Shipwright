@@ -1113,8 +1113,17 @@ namespace SohImGui {
                 Tooltip("Automatically activates the Infinite Sword glitch, making you constantly swing your sword");
                 EnhancementCheckbox("Freeze Time", "gFreezeTime");
                 Tooltip("Freezes the time of day");
+<<<<<<< HEAD
+                EnhancementCheckbox("Drops Don't Despawn", "gDropsDontDie");
+                Tooltip("Drops from enemies, grass, etc. don't disappear after a set amount of time");
+                EnhancementCheckbox("Fireproof Deku Shield", "gFireproofDekuShield");
+                Tooltip("Prevents the Deku Shield from burning on contact with fire");
+                EnhancementCheckbox("Shield with Two-Handed Weapons", "gShieldTwoHanded");
+                Tooltip("Allows Link to shield normally with two-handed swords and the Megaton Hammer");
+=======
                 EnhancementCheckbox("Free Scarecrow's Song", "gFreeScarecrow");
-                Tooltip("Allows you to use Pierre without first setting the Scarecrow's Song");
+                Tooltip("Allows you to use Pierre without setting the Scarecrow's song");
+>>>>>>> 4405e70 (Added two cheats (inf. hover boots; free scarecrow's song))
 
                 ImGui::EndMenu();
             }
