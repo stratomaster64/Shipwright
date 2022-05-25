@@ -140,7 +140,7 @@ void func_80A90264(EnKakasi2* this, GlobalContext* globalCtx) {
                (gSaveContext.eventChkInf[9] & 0x1000)) {
 
         this->unk_194 = 0;
-        if (globalCtx->msgCtx.ocarinaMode == OCARINA_MODE_0B) {
+        if (globalCtx->msgCtx.ocarinaMode == OCARINA_MODE_0B || ((CVar_GetS32("gFreeScarecrow", 0)) && globalCtx->msgCtx.ocarinaMode == OCARINA_MODE_04)) {
             if (this->switchFlag >= 0) {
                 Flags_SetSwitch(globalCtx, this->switchFlag);
             }

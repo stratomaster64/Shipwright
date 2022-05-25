@@ -750,6 +750,7 @@ namespace SohImGui {
                     EnhancementCheckbox("Ammo", "gInfiniteAmmo");
                     EnhancementCheckbox("Magic", "gInfiniteMagic");
                     EnhancementCheckbox("Nayru's Love", "gInfiniteNayru");
+                    EnhancementCheckbox("Hover Boots", "gInfiniteHover");
 
                     ImGui::EndMenu();
                 }
@@ -781,6 +782,8 @@ namespace SohImGui {
                 Tooltip("Automatically activates the Infinite Sword glitch, making you constantly swing your sword");
                 EnhancementCheckbox("Freeze Time", "gFreezeTime");
                 Tooltip("Freezes the time of day");
+                EnhancementCheckbox("Free Scarecrow's Song", "gFreeScarecrow");
+                Tooltip("Allows you to use Pierre without setting the Scarecrow's song");
 
                 ImGui::EndMenu();
             }

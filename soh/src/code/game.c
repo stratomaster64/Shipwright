@@ -386,6 +386,14 @@ void GameState_Update(GameState* gameState) {
     if (CVar_GetS32("gInfiniteNayru", 0) != 0) {
         gSaveContext.nayrusLoveTimer = 0x44B;
     }
+
+    // Inf Hover Boots Timer
+    if (CVar_GetS32("gInfiniteHover", 0)) {
+        if (gGlobalCtx) {
+            Player* player = GET_PLAYER(gGlobalCtx);
+            player->hoverBootsTimer = 19;
+        }
+    }
     
     // Moon Jump On L
     if (CVar_GetS32("gMoonJumpOnL", 0) != 0) {
@@ -436,7 +444,7 @@ void GameState_Update(GameState* gameState) {
         CVar_SetS32("gPrevTime", -1);
     }
 
-    //za warudo
+    // Freeze Enemies
     if (CVar_GetS32("gFreezeEnemies", 0) != 0) {
         if (gGlobalCtx) {
             ActorContext* actx = &gGlobalCtx->actorCtx;
