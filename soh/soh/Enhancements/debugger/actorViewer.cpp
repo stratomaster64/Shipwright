@@ -564,7 +564,7 @@ void DrawActorViewer(bool& open) {
         }
         for (int i = 0; i < list.size(); i++) { 
             std::string label = std::to_string(i) + ": " + list[i]->overlayEntry->name;
-            const auto& description = actorDescriptions.find(list[i]->id);          
+            const auto& description = actorDescriptions.find(list[i]->id);
             if (description != actorDescriptions.end())
                 label += " (" + description->second + ")";
 
