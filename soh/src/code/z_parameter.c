@@ -746,7 +746,7 @@ void func_80083108(GlobalContext* globalCtx) {
             }
         } else if (msgCtx->msgMode == MSGMODE_NONE) {
             if ((func_8008F2F8(globalCtx) >= 2) && (func_8008F2F8(globalCtx) < 5)) {
-                if (func_8008F2F8(globalCtx) == 2) {
+                if (func_8008F2F8(globalCtx) == 2 && CVar_GetS32("gUnderwaterItems", 0)) {
                     if (gSaveContext.buttonStatus[0] == BTN_DISABLED) {
                         sp28 = 1;
                     }
