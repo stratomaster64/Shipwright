@@ -1035,7 +1035,10 @@ namespace SohImGui {
                     Tooltip("Allows you to use any item underwater (as long as you're standing)");
                     EnhancementCheckbox("No Age Restrictions", "gNoRestrictAge");
                     Tooltip("Allows you to use any item as either age");
-
+                    EnhancementCheckbox("Fireproof Deku Shield", "gFireproofDekuShield");
+                    Tooltip("Prevents the Deku Shield from burning on contact with fire");
+                    EnhancementCheckbox("Shield with Two-Handed Weapons", "gShieldTwoHanded");
+                    Tooltip("Allows Link to shield normally with two-handed swords and the Megaton Hammer");
                     ImGui::EndMenu();
                 }
 
@@ -1056,7 +1059,7 @@ namespace SohImGui {
                 EnhancementCheckbox("Freeze Time", "gFreezeTime");
                 Tooltip("Freezes the time of day");
                 EnhancementCheckbox("Free Scarecrow's Song", "gFreeScarecrow");
-                Tooltip("Allows you to use Pierre without setting the Scarecrow's song");
+                Tooltip("Allows you to use Pierre without first setting the Scarecrow's Song");
 
                 ImGui::EndMenu();
             }
