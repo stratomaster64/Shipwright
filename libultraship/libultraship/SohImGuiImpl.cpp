@@ -1052,7 +1052,7 @@ namespace SohImGui {
                     CVar_SetS32("gDisableKokiriDrawDistance", 0);
                 } else if (CVar_GetS32("gDisableDrawDistance", 0) == 1) {
                     EnhancementCheckbox("Kokiri Draw Distance", "gDisableKokiriDrawDistance");
-                    Tooltip("Kokiris are mystical being that appear from a certain distance\nEnable this will remove their draw distance\nNeeds to reload the map to take effect");
+                    Tooltip("Kokiris are mystical being that appear from a certain distance\nEnable this will remove their draw distance");
                 }
 
                 ImGui::EndMenu();
@@ -1122,10 +1122,6 @@ namespace SohImGui {
                 Tooltip("Allows you to use Pierre without setting the Scarecrow's song");
                 EnhancementCheckbox("Drops Don't Despawn", "gDropsDontDie");
                 Tooltip("Drops from enemies, grass, etc. don't disappear after a set amount of time");
-                EnhancementCheckbox("Fireproof Deku Shield", "gFireproofDekuShield");
-                Tooltip("Prevents the Deku Shield from burning on contact with fire");
-                EnhancementCheckbox("Shield with Two-Handed Weapons", "gShieldTwoHanded");
-                Tooltip("Allows Link to shield normally with two-handed swords and the Megaton Hammer");
                 ImGui::EndMenu();
             }
 
