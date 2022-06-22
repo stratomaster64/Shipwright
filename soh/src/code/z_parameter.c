@@ -751,12 +751,19 @@ void func_80083108(GlobalContext* globalCtx) {
             }
         } else if (msgCtx->msgMode == MSGMODE_NONE) {
             if ((func_8008F2F8(globalCtx) >= 2) && (func_8008F2F8(globalCtx) < 5)) {
-                if (gSaveContext.buttonStatus[0] != BTN_DISABLED) {
-                    sp28 = 1;
-                }
+                if (func_8008F2F8(globalCtx) == 2 && CVar_GetS32("gUnderwaterItems", 0)) {
+                    if (gSaveContext.buttonStatus[0] == BTN_DISABLED) {
+                        sp28 = 1;
+                    }
+
+                    gSaveContext.buttonStatus[0] = BTN_ENABLED;
+                } else {
+                    if (gSaveContext.buttonStatus[0] != BTN_DISABLED) {
+                        sp28 = 1;
+                    }
 
                 gSaveContext.buttonStatus[0] = BTN_DISABLED;
-
+              }
                 for (i = 1; i < 4; i++) {
                     if ((gSaveContext.equips.buttonItems[i] >= ITEM_SHIELD_DEKU) &&
                         (gSaveContext.equips.buttonItems[i] <= ITEM_BOOTS_HOVER)) {
@@ -773,7 +780,9 @@ void func_80083108(GlobalContext* globalCtx) {
                                 sp28 = 1;
                             }
 
-                            gSaveContext.buttonStatus[i] = BTN_DISABLED;
+                            if (!CVar_GetS32("gUnderwaterItems", 0)) {
+                                gSaveContext.buttonStatus[i] = BTN_DISABLED;
+                            } 
                         } else {
                             if (gSaveContext.buttonStatus[i] == BTN_DISABLED) {
                                 sp28 = 1;
@@ -786,7 +795,9 @@ void func_80083108(GlobalContext* globalCtx) {
                             sp28 = 1;
                         }
 
-                        gSaveContext.buttonStatus[i] = BTN_DISABLED;
+                        if (!CVar_GetS32("gUnderwaterItems", 0)) {
+                            gSaveContext.buttonStatus[i] = BTN_DISABLED;
+                        } 
                     }
                 }
 
